@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payout</title>
+</head>
+<body>
+<div align="center"  style="margin-top:50px">
+    <form method="post" th:action="@{/payout}" th:object="${payoutDTO}">
+        <fieldset>
+            <div>
+                <input type="number" name="amount" th:field="*{amount}" id="amount" class="form-control input-lg"
+                       placeholder="amount" required="true" autofocus="true"/>
+            </div>
+            <div >
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block" value="Pay"/>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+

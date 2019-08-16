@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit</title>
+</head>
+<body>
+<div align="center"  style="margin-top:50px">
+    <form method="post" th:action="@{/deposit}" th:object="${depositDTO}">
+        <fieldset>
+            <div>
+                <input type="number" name="subtotal" th:field="*{subtotal}" id="subtotal" class="form-control input-lg"
+                       placeholder="subtotal" required="true" autofocus="true"/>
+            </div>
+            <div>
+                <input type="number" name="tax" th:field="*{tax}" id="tax" class="form-control input-lg"
+                       placeholder="tax" required="true" autofocus="true"/>
+            </div>
+            <div>
+                <input type="number" name="tax" th:field="*{shipping}" id="shipping" class="form-control input-lg"
+                       placeholder="shipping" required="true" autofocus="true"/>
+            </div>
+            <div >
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block" value="Deposit"/>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
